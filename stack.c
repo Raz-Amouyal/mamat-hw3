@@ -51,7 +51,7 @@ int stack_destroy(struct stack * stack){
     while (cursor){
         tmp = cursor;
         cursor = cursor->next;
-        stack->destroy(tmp->element)
+        stack->destroy(tmp->element);
         free(tmp);
     }
 
@@ -82,11 +82,11 @@ int stack_push(struct stack * stack, elem_t elem){
     new_node->element = clone;
 
     if (stack->head) {
-        stack->head->prev = new_node
+        stack->head->prev = new_node;
     }
     stack->head = new_node;
     if (!stack->tail) {
-        stack->tail = new_node
+        stack->tail = new_node;
     }
     stack->size++;
     return SUCCESS;
@@ -125,7 +125,7 @@ int stack_capacity(struct stack * stack){
     if(!stack){
         return 0;
     }
-    int capacity = stack->max_size - stack->size
+    int capacity = stack->max_size - stack->size;
     return capacity;
 }
 
