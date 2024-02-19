@@ -5,16 +5,15 @@
 #include <stdio.h>   /* printf etc. */
 #include <stdlib.h>  /* malloc etc. */
 #include <stdbool.h> /* bool type */
+#include "common.h"
 
 /* typename of list user functions */
-typedef void * elem_t; /* Pointer to element in the stack */
 typedef void* (*clone_t)(elem_t e);/* Clones the element */
 typedef void (*destroy_t)(elem_t e); /* Returns 1 iff (*a)==(*b) */
 typedef void (*print_t)(elem_t e); /* Print the element */
 
 struct stack; /* Opaque pointer */
 
-enum result { SUCCESS = 0, FAIL };
 
 struct stack * stack_creat(int max_size_of_stack,
                            clone_t clone,
