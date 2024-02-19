@@ -8,7 +8,7 @@ RM=rm -f *.o *.exe
 $(EXEC): $(OBJS)
 	$(CCLINK) $(OBJS) -o $(EXEC) 
 
-stack.o: stack.h stack.c
+stack.o: stack.h stack.c common.h
 	$(CC) $(CFLAGS) -c stack.c
 student.o: stack.h student.h student.c
 	$(CC) $(CFLAGS) -c student.c
