@@ -29,7 +29,7 @@ void student_destroy(void *elem){
 
     struct student *tmp;
     tmp = (struct student*)elem;
-    free(tmp->name); /* need to check if needed */
+    /*free(tmp->name);  need to check if needed */
     free(tmp);
 }
 
