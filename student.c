@@ -1,11 +1,6 @@
 #include "student.h"
 
 
-struct student {
-    char *name;
-    int age;
-    int id;
-};
 
 void *student_clone(void *elem){
 
