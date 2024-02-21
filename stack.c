@@ -20,7 +20,7 @@ struct node {
 
 
 
-struct stack * stack_creat(int max_size_of_stack,
+struct stack * stack_create(int max_size_of_stack,
                   clone_t clone,
                   destroy_t destroy,
                   print_t print){
