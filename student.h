@@ -8,7 +8,12 @@
 
 #include "stack.h"
 
-struct student; /* Opaque pointer */
+struct student {
+    char *name;
+    int age;
+    int id;
+};
+
 
 void *student_clone(void *elem);
 void student_destroy(void *elem);
