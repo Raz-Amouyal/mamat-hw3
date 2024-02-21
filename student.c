@@ -15,13 +15,15 @@ void *student_clone(void *elem){
     student = (struct student*)elem;
 
     clone = (struct student*)malloc(sizeof(*clone));
-    if (!clone){
-        return NULL;
+     
+    if (clone){
+        clone.name = (char*)malloc(sizeof(char)*(strlen(student.name)+1);
+        if(str){
+            strcpy(clone.name, student.name;
+            clone->age = student->age;
+            clone->id = student->id;
+        }
     }
-
-    clone->name = student->name;
-    clone->age = student->age;
-    clone->id = student->id;
     return clone;
 }
 
