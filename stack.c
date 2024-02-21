@@ -98,6 +98,7 @@ void stack_pop(struct stack * stack){
     struct node * node = stack->head;
     stack->head = stack->head->next; /* Update head */
     stack->head->prev = NULL;
+    stack->destroy(node->element);
     free(node);
     stack->size--;
 }
