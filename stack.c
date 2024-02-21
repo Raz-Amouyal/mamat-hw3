@@ -106,7 +106,7 @@ void* stack_peek(struct stack * stack){
     if (!stack->head){
         return NULL;
     }
-    return stack->head;
+    return stack->head->element;
 }
 int stack_size(struct stack * stack){
     if(!stack){
