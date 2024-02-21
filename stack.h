@@ -5,6 +5,7 @@
 #include <stdio.h>   /* printf etc. */
 #include <stdlib.h>  /* malloc etc. */
 #include <stdbool.h> /* bool type */
+#include <string.h>
 #include "common.h"
 
 /* typename of list user functions */
